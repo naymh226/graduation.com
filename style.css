@@ -1,0 +1,190 @@
+body{
+
+margin:0;
+font-family:'Segoe UI',sans-serif;
+overflow:hidden;
+
+background: linear-gradient(-45deg,#ff9a9e,#fad0c4,#ffdde1,#fbc2eb);
+background-size:400% 400%;
+
+animation:bgmove 12s ease infinite;
+
+}
+
+/* background animation */
+
+@keyframes bgmove{
+
+0%{background-position:0% 50%}
+
+50%{background-position:100% 50%}
+
+100%{background-position:0% 50%}
+
+}
+
+/* card design */
+
+.card-box{
+
+background:rgba(255,255,255,0.2);
+
+backdrop-filter:blur(10px);
+
+padding:40px;
+
+border-radius:20px;
+
+width:420px;
+
+color:white;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+
+}
+
+/* title */
+
+.title{
+
+font-weight:700;
+
+margin-bottom:10px;
+
+}
+
+/* name */
+
+.name{
+
+margin-bottom:20px;
+
+}
+
+/* image */
+
+.profile-img{
+
+width:200px;
+
+height:200px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:5px solid white;
+
+}
+
+/* popup */
+
+.letter{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.6);
+
+display:none;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+/* letter box */
+
+.letter-box{
+
+background:white;
+
+padding:40px;
+
+border-radius:15px;
+
+width:420px;
+
+text-align:center;
+
+color:#333;
+
+animation:pop 0.4s;
+
+}
+
+/* popup animation */
+
+@keyframes pop{
+
+0%{transform:scale(0.6)}
+
+100%{transform:scale(1)}
+
+}
+
+/* floating hearts */
+
+.heart{
+
+position:absolute;
+
+color:#ff4d6d;
+
+animation:float 6s linear infinite;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-800px);
+
+opacity:0;
+
+}
+
+}
+
+/* mobile */
+
+@media (max-width:768px){
+
+.card-box{
+
+width:90%;
+
+padding:30px;
+
+}
+
+.profile-img{
+
+width:150px;
+
+height:150px;
+
+}
+
+.letter-box{
+
+width:90%;
+
+}
+
+}
