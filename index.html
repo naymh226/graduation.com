@@ -7,14 +7,24 @@
 
 <title>Graduation Surprise</title>
 
-<!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
 <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
+
+<!-- Start Screen -->
+<div id="startScreen">
+
+<div class="start-card" onclick="openEnvelope()">
+
+<p>Open Your Letter</p>
+💌
+</div>
+
+</div>
+
 
 <div class="container d-flex justify-content-center align-items-center min-vh-100">
 
@@ -36,7 +46,8 @@ Open Message 💌
 
 </div>
 
-<!-- Letter Popup -->
+
+<!-- Message Popup -->
 
 <div id="letter" class="letter">
 
@@ -45,6 +56,7 @@ Open Message 💌
 <h2>💐 卒業おめでとう 💐</h2>
 
 <p>
+
 ဒီနေ့ထိ ကြိုးစားလာခဲ့တာတွေကို တကယ်ဂုဏ်ယူပါတယ်။<br><br>
 
 အနာဂတ်မှာလဲ ပိုပြီးလှပပြီး အောင်မြင်မှုတွေနဲ့ပြည့်နေပါစေ။<br><br>
@@ -53,7 +65,8 @@ Open Message 💌
 
 အမြဲတမ်းအနားမှာရှိနေပေးပါ<br><br>
 
-အများကြီးချစ်တယ်❤️❤️🫶🏻<br><br>
+အများကြီးချစ်တယ် ❤️❤️🫶🏻
+
 </p>
 
 <button class="btn btn-danger" onclick="closeLetter()">
@@ -65,7 +78,7 @@ Close
 </div>
 
 <script src="script.js"></script>
+<audio id="bgmusic" src="music.mp3"></audio>
 
 </body>
-
 </html>
