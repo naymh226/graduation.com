@@ -1,5 +1,4 @@
 body{
-
 margin:0;
 font-family:'Segoe UI',sans-serif;
 overflow:hidden;
@@ -8,10 +7,7 @@ background: linear-gradient(-45deg,#ff9a9e,#fad0c4,#ffdde1,#fbc2eb);
 background-size:400% 400%;
 
 animation:bgmove 12s ease infinite;
-
 }
-
-/* background animation */
 
 @keyframes bgmove{
 
@@ -23,142 +19,170 @@ animation:bgmove 12s ease infinite;
 
 }
 
-/* card design */
+/* main card */
 
 .card-box{
-
-background:rgba(255,255,255,0.2);
-
-backdrop-filter:blur(10px);
-
+background: rgba(255,255,255,0.15);
+backdrop-filter: blur(20px);
 padding:40px;
-
-border-radius:20px;
-
+border-radius:25px;
 width:420px;
-
 color:white;
-
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
-
-}
-
-/* title */
-
-.title{
-
-font-weight:700;
-
-margin-bottom:10px;
-
-}
-
-/* name */
-
-.name{
-
-margin-bottom:20px;
-
+box-shadow:0 20px 50px rgba(0,0,0,0.25);
 }
 
 /* image */
 
 .profile-img{
-
 width:200px;
-
 height:200px;
-
 border-radius:50%;
-
 object-fit:cover;
-
 border:5px solid white;
-
+box-shadow:0 0 25px rgba(255,255,255,0.8);
 }
 
 /* popup */
 
 .letter{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+display:none;
+justify-content:center;
+align-items:center;
+}
+
+.letter-box{
+background:white;
+padding:40px;
+border-radius:20px;
+width:420px;
+text-align:center;
+color:#333;
+animation:pop 0.4s ease;
+}
+
+@keyframes pop{
+0%{
+transform:scale(0.6);
+opacity:0;
+}
+100%{
+transform:scale(1);
+opacity:1;
+}
+}
+
+/* button */
+
+button{
+padding:15px 30px;
+border:none;
+border-radius:30px;
+font-size:18px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* start screen */
+
+#startScreen{
 
 position:fixed;
-
 top:0;
 left:0;
 
 width:100%;
 height:100%;
 
-background:rgba(0,0,0,0.6);
+background: linear-gradient(-45deg,#ff9a9e,#fad0c4,#ffdde1,#fbc2eb);
+background-size:400% 400%;
 
-display:none;
+animation:bgmove 12s ease infinite;
 
+display:flex;
 justify-content:center;
-
 align-items:center;
 
-}
-
-/* letter box */
-
-.letter-box{
-
-background:white;
-
-padding:40px;
-
-border-radius:15px;
-
-width:420px;
-
-text-align:center;
-
-color:#333;
-
-animation:pop 0.4s;
+z-index:9999;
 
 }
 
-/* popup animation */
+/* start card */
 
-@keyframes pop{
+.start-card{
 
-0%{transform:scale(0.6)}
+width:220px;
+height:220px;
 
-100%{transform:scale(1)}
+background:rgba(255,255,255,0.2);
+
+backdrop-filter:blur(15px);
+
+border-radius:30px;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+font-size:45px;
+
+cursor:pointer;
+
+box-shadow:0 20px 50px rgba(0,0,0,0.25);
+
+transition:0.4s;
+
+color:white;
 
 }
 
+/* hover */
+
+.start-card:hover{
+
+transform:scale(1.1);
+
+}
+
+/* text */
+
+.start-card p{
+
+font-size:20px;
+
+margin-top:10px;
+
+color:white;
+
+}
 /* floating hearts */
 
 .heart{
-
 position:absolute;
-
 color:#ff4d6d;
-
 animation:float 6s linear infinite;
-
 }
 
 @keyframes float{
-
 0%{
-
 transform:translateY(0);
-
 opacity:1;
-
 }
-
 100%{
-
 transform:translateY(-800px);
-
 opacity:0;
-
 }
-
 }
 
 /* mobile */
@@ -166,25 +190,17 @@ opacity:0;
 @media (max-width:768px){
 
 .card-box{
-
 width:90%;
-
 padding:30px;
-
 }
 
 .profile-img{
-
 width:150px;
-
 height:150px;
-
 }
 
 .letter-box{
-
 width:90%;
-
 }
 
 }
